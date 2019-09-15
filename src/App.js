@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from 'react'
+import SingleNote from './components/SingleNote'
+import SingleScale from './components/SingleScale'
+import Progression from './components/Progression'
+import './App.css'
+
 
 function App() {
+  const [ screen, setScreen ] = useState('home')
+
+  const back = () => setScreen('home')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      { screen === 'home' && <Fragment>
+        <h1>Guitar Trainer</h1>
+        <button onClick={() => setScreen('single note')}>Single Note</button>
+        <button onClick={() => setScreen('single scale')}>Single Scale</button>
+        <button onClick={() => setScreen('progression')}>Progression</button>
+      </Fragment>
+      } 
+      { screen === 'single note' && <SingleNote back={back} />}
+      { screen === 'single scale' && <SingleScale back={back} />}
+      { screen === 'progression' && <Progression back={back} />}
     </div>
   );
 }
