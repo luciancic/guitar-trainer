@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { notes } from '../consts'
 import { getRandomFrom, randUpTo } from '../helper'
+import BackButton from './BackButton'
 
 function SingleNote({ back }) {
     const [ note, setNote ] = useState(getRandomFrom(notes))
@@ -31,17 +32,15 @@ function SingleNote({ back }) {
     }
 
     return (
-        <div>
-            <h1>Single Note</h1>
-            <div>
-                Note: {note}
-                <button onClick={() => setPlaying(!playing) }>{ playing ? 'Pause' : 'Resume' }</button>
+        <div className="page">
+            <div className="header">
+                <BackButton back={back} />
+                <h1>Single Note</h1>
             </div>
-            <div>
-                Frets: {fret} - {fret + 3}
-                <button onClick={() => setFret(randUpTo(20))}>Change Frets</button>
-            </div>
-            <div>
+            <button className="button-red" onClick={() => setPlaying(!playing) }>{note}</button>
+            <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>
+            {/* Previously used time change solution
+                <div>
                 Change Speed (ms):
                 <input 
                     onChange={handleTimeChange} 
@@ -49,8 +48,7 @@ function SingleNote({ back }) {
                     type='number' 
                     min='1000' 
                     max='6000' />
-            </div>
-            <button onClick={back}>Back</button>
+            </div> */}
         </div>
     )
 }

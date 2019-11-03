@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { keys, progressions } from '../consts'
 import { getRandomFrom } from '../helper'
+import BackButton from './BackButton'
 
 function Progression({ back }) {
     const [ key, setKey ] = useState(getRandomFrom(keys))
@@ -12,12 +13,14 @@ function Progression({ back }) {
     }
 
     return (
-        <div>
-            <h1>Progressions</h1>
-            <div>Key: {key}</div>
-            <div>Progression: {progression}</div>
-            <button onClick={next}>Next</button>
-            <button onClick={back}>Back</button>
+        <div className="page">
+            <div className="header">
+                <BackButton back={back} />
+                <h1>Progressions</h1>
+            </div>
+            <button className="button-red">{key}</button>
+            <button className="button-blue">{progression}</button>
+            <button className="button-small" onClick={next}>Next</button>
         </div>
     )
 }

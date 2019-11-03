@@ -1,0 +1,65 @@
+$lightblue: #CED5FF;
+$blue: #3633D1;
+$red: #AF0F0F;
+$green: #138744;
+
+.app {
+  text-align: center;
+  background-color: $lightblue;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 92vh;
+  margin-bottom: 8vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 25vh;
+
+  & .back {
+    flex-basis: 135px;
+  }
+}
+
+button {
+  font-family: Redressed;
+  font-size: 32px;
+  color: white;
+  background-color: $green;
+  width: 233px;
+  height: 78px;
+  border: none;
+  border-radius: 4px;
+}
+
+.button {
+  &-red {
+    background-color: $red;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    font-size: 70px;
+  }
+
+  &-blue {
+    background-color: $blue;
+  }
+
+  &-small {
+    height: 68px;
+    width: 200px;
+  }
+}

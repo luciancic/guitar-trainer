@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import { keys } from '../consts'
 import { getRandomFrom } from '../helper'
+import BackButton from './BackButton'
 
 function SingleScale({ back }) {
     const [ key, setKey ] = useState(getRandomFrom(keys))
 
     return (
-        <div>
-            <h1>Single Scale</h1>
-            <div>Scale: {key}</div>
-            <button onClick={() => setKey(getRandomFrom(keys))}>Next</button>
-            <button onClick={back}>Back</button>
+        <div className="page">
+            <div className="header">
+                <BackButton back={back} />
+                <h1>Single Scale</h1>
+            </div>
+            <button className="button-red" onClick={() => setKey(getRandomFrom(keys))}>{key}</button>
+            <button className="button-small" onClick={() => setKey(getRandomFrom(keys))}>Next</button>
         </div>
     )
 }
