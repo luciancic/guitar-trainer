@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import SingleNote from './components/SingleNote'
 import SingleScale from './components/SingleScale'
 import Progression from './components/Progression'
-import './App.css'
+import './App.scss'
 
 
 function App() {
