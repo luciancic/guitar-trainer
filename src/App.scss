@@ -8,6 +8,15 @@ h1 {
   font-size: 2.8rem;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 87vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 13vh;
+}
+
 button {
   font-family: Redressed;
   font-size: 1.8rem;
