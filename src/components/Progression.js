@@ -12,7 +12,7 @@ function Progression({ back }) {
     }
 
     return (
-        <div>
+        <div className="page">
             <h1>Progressions</h1>
             <button className="button-red">{key}</button>
             <button className="button-blue">{progression}</button>

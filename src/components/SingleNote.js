@@ -31,7 +31,7 @@ function SingleNote({ back }) {
     }
 
     return (
-        <div>
+        <div className="page">
             <h1>Single Note</h1>
             <button className="button-red" onClick={() => setPlaying(!playing) }>{note}</button>
             <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>

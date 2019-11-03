@@ -11,15 +11,16 @@ $green: #138744;
 
 h1 {
   font-size: 48px;
+  margin: none;
 }
 
-.home {
+.page {
   display: flex;
   flex-direction: column;
-  height: 87vh;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 13vh;
+  height: 92vh;
+  margin-bottom: 8vh;
 }
 
 button {
