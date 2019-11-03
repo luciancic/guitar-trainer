@@ -52,6 +52,10 @@ button {
     width: 200px;
     border-radius: 100%;
     font-size: 70px;
+
+    &-highlight {
+      box-shadow: #AF0F0F 0px 0px 22px;
+    }
   }
 
   &-blue {

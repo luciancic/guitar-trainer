@@ -8,7 +8,8 @@ function SingleNote({ back }) {
     const [ fret, setFret ] = useState(randUpTo(20))
     const [ playing, setPlaying ] = useState(true)
     const [ intervalLength, setIntervalLength ] = useState(4000)
-    const noteItv = useRef();
+    const noteItv = useRef()
+    const redButtonClass = playing ? 'button-red' : 'button-red button-red-highlight'
     
     useEffect(() => {
         if (playing) {
@@ -37,7 +38,7 @@ function SingleNote({ back }) {
                 <BackButton back={back} />
                 <h1>Single Note</h1>
             </div>
-            <button className="button-red" onClick={() => setPlaying(!playing) }>{note}</button>
+            <button className={redButtonClass} onClick={() => setPlaying(!playing) }>{note}</button>
             <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>
             {/* Previously used time change solution
                 <div>
