@@ -39,7 +39,8 @@ function SingleNote({ back }) {
             </div>
             <button className="button-red" onClick={() => setPlaying(!playing) }>{note}</button>
             <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>
-            <div>
+            {/* Previously used time change solution
+                <div>
                 Change Speed (ms):
                 <input 
                     onChange={handleTimeChange} 
@@ -47,7 +48,7 @@ function SingleNote({ back }) {
                     type='number' 
                     min='1000' 
                     max='6000' />
-            </div>
+            </div> */}
         </div>
     )
 }
