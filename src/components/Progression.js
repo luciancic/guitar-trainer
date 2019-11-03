@@ -20,7 +20,7 @@ function Progression({ back }) {
             </div>
             <button className="button-red">{key}</button>
             <button className="button-blue">{progression}</button>
-            <button onClick={next}>Next</button>
+            <button className="button-small" onClick={next}>Next</button>
         </div>
     )
 }

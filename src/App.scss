@@ -47,9 +47,18 @@ button {
 .button {
   &-red {
     background-color: $red;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    font-size: 70px;
   }
 
   &-blue {
     background-color: $blue;
+  }
+
+  &-small {
+    height: 68px;
+    width: 200px;
   }
 }

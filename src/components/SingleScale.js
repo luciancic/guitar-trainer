@@ -13,7 +13,7 @@ function SingleScale({ back }) {
                 <h1>Single Scale</h1>
             </div>
             <button className="button-red" onClick={() => setKey(getRandomFrom(keys))}>{key}</button>
-            <button onClick={() => setKey(getRandomFrom(keys))}>Next</button>
+            <button className="button-small" onClick={() => setKey(getRandomFrom(keys))}>Next</button>
         </div>
     )
 }
