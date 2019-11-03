@@ -33,14 +33,8 @@ function SingleNote({ back }) {
     return (
         <div>
             <h1>Single Note</h1>
-            <div>
-                Note: {note}
-                <button onClick={() => setPlaying(!playing) }>{ playing ? 'Pause' : 'Resume' }</button>
-            </div>
-            <div>
-                Frets: {fret} - {fret + 3}
-                <button onClick={() => setFret(randUpTo(20))}>Change Frets</button>
-            </div>
+            <button className="button-red" onClick={() => setPlaying(!playing) }>{note}</button>
+            <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>
             <div>
                 Change Speed (ms):
                 <input 
