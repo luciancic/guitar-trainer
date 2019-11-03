@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { notes } from '../consts'
 import { getRandomFrom, randUpTo } from '../helper'
+import BackButton from './BackButton'
 
 function SingleNote({ back }) {
     const [ note, setNote ] = useState(getRandomFrom(notes))
@@ -32,7 +33,10 @@ function SingleNote({ back }) {
 
     return (
         <div className="page">
-            <h1>Single Note</h1>
+            <div className="header">
+                <BackButton back={back} />
+                <h1>Single Note</h1>
+            </div>
             <button className="button-red" onClick={() => setPlaying(!playing) }>{note}</button>
             <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>
             <div>
@@ -44,7 +48,6 @@ function SingleNote({ back }) {
                     min='1000' 
                     max='6000' />
             </div>
-            <button onClick={back}>Back</button>
         </div>
     )
 }
