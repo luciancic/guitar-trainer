@@ -14,8 +14,8 @@ function Progression({ back }) {
     return (
         <div>
             <h1>Progressions</h1>
-            <div>Key: {key}</div>
-            <div>Progression: {progression}</div>
+            <button className="button-red">{key}</button>
+            <button className="button-blue">{progression}</button>
             <button onClick={next}>Next</button>
             <button onClick={back}>Back</button>
         </div>
