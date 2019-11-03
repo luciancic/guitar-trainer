@@ -1,6 +1,11 @@
+$lightblue: #CED5FF;
+$blue: #3633D1;
+$red: #AF0F0F;
+$green: #138744;
+
 .app {
   text-align: center;
-  background-color: #ced5ff;
+  background-color: $lightblue;
   min-height: 100vh;
 }
 
@@ -21,18 +26,19 @@ button {
   font-family: Redressed;
   font-size: 1.8rem;
   color: white;
-  background-color: #138744;
+  background-color: $green;
   width: 70%;
   padding: 20px;
   border: none;
   border-radius: 4px;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  height: 87vh;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 13vh;
+.button {
+  &-red {
+    background-color: $red;
+  }
+
+  &-blue {
+    background-color: $blue;
+  }
 }
