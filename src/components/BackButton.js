@@ -2,7 +2,7 @@ import React from 'react';
 
 function BackButton({back}) {
   return (
-    <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={back}>
+    <svg className="back" onClick={back} width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="35.5" cy="35.5" r="35.5" fill="#F2AAAA"/>
       <line x1="53.6538" y1="16" x2="53.6538" y2="53.8462" stroke="black" stroke-width="3"/>
       <line x1="48.0385" y1="16" x2="48.0385" y2="53.8462" stroke="black"/>
