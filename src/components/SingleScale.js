@@ -8,8 +8,7 @@ function SingleScale({ back }) {
     return (
         <div>
             <h1>Single Scale</h1>
-            <div>Scale: {key}</div>
-            <button onClick={() => setKey(getRandomFrom(keys))}>Next</button>
+            <button className="button-red" onClick={() => setKey(getRandomFrom(keys))}>{key}</button>
             <button onClick={back}>Back</button>
         </div>
     )
