@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home({ setScreen }) {
   return (
-    <div>
+    <div class="home">
       <h1>Guitar Trainer</h1>
       <button onClick={() => setScreen('single note')}>Single Note</button>
       <button onClick={() => setScreen('single scale')}>Single Scale</button>
