@@ -8,7 +8,7 @@ function SingleNote({ back }) {
     const [ note, setNote ] = useState(getRandomFrom(notes))
     const [ fret, setFret ] = useState(randUpTo(20))
     const [ playing, setPlaying ] = useState(true)
-    const [ intervalLength, setIntervalLength ] = useState(4000)
+    const [ intervalLength, setIntervalLength ] = useState(2000)
     const noteItv = useRef()
     const redButtonClass = playing ? 'button-red' : 'button-red button-red-highlight'
     
@@ -24,15 +24,6 @@ function SingleNote({ back }) {
         }
     }, [playing, intervalLength])
 
-
-    function handleTimeChange(e) {
-        const inter = Number(e.target.value)
-
-        if (inter > 0) {
-            setIntervalLength(inter)
-        }
-    }
-
     return (
         <div className="page">
             <div className="header">
@@ -41,7 +32,7 @@ function SingleNote({ back }) {
             </div>
             <button className={redButtonClass} onClick={() => setPlaying(!playing) }>{note}</button>
             <button className="button-blue" onClick={() => setFret(randUpTo(20))}>Frets: {fret} - {fret + 3}</button>
-            <SpeedSelect />
+            <SpeedSelect handleChange={setIntervalLength}/>
         </div>
     )
 }
