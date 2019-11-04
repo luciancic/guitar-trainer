@@ -69,3 +69,55 @@ button {
     width: 200px;
   }
 }
+
+.speed-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 233px;
+
+  & label {
+    font-size: 36px;
+    margin-bottom: 7px;
+  }
+  
+  & fieldset {
+    width: 100%;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+      & input {
+        margin: 0;
+        display: none;
+      }
+
+      & label {
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 4px solid black;
+        border-radius: 100%;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-8px, -8px);
+          border-radius: 100%;
+          background-color: $green;
+          opacity: 0;
+        }
+      }
+      & input:checked ~ label::before {
+        opacity: 1;
+      }
+    }
+  }
+}
