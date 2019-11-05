@@ -4,10 +4,27 @@ $blue: #3633D1;
 $red: #AF0F0F;
 $green: #138744;
 
+@keyframes move-in-down {
+  from { 
+    transform: translateY(-25vh);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-up {
+  from { transform: translateY(75vh) }
+  to { transform: translateY(0vh) }
+}
+
 .app {
   text-align: center;
   background-color: $lightgreen;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
@@ -22,6 +39,16 @@ h1 {
   align-items: center;
   height: 92vh;
   margin-bottom: 8vh;
+
+  & button:nth-child(2) {
+    animation: move-in-up 800ms ease;
+  }
+  & button:nth-child(3) {
+    animation: move-in-up 1000ms ease;
+  }
+  & > *:nth-child(4) {
+    animation: move-in-up 1200ms ease;
+  }
 }
 
 .header {
@@ -30,6 +57,7 @@ h1 {
   justify-content: center;
   width: 100vw;
   height: 25vh;
+  animation: move-in-down 800ms ease;
 
   & .back {
     flex-basis: 135px;
