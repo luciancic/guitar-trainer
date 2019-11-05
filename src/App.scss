@@ -32,7 +32,7 @@ $green: #138744;
 
 @keyframes move-out-down {
   from { transform: translateY(0vh) }
-  to { transform: translateY(75vh) }
+  to { transform: translateY(85vh) }
 }
 
 .app {
@@ -67,13 +67,13 @@ h1 {
 
   &-exit {
     & button:nth-child(2) {
-      animation: move-out-down 1200ms ease;
+      animation: move-out-down 900ms ease;
     }
     & button:nth-child(3) {
-      animation: move-out-down 1000ms ease;
+      animation: move-out-down 800ms ease;
     }
     & > *:nth-child(4) {
-      animation: move-out-down 900ms ease;
+      animation: move-out-down 700ms ease;
     }
   }
   & .header {

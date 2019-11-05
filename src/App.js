@@ -16,16 +16,16 @@ function App() {
 
   return (
     <div className='app'>
-      <CSSTransition in={shouldRender('home')} classNames="page" timeout={800} unmountOnExit onExited={onExited}>
+      <CSSTransition in={shouldRender('home')} classNames="page" timeout={600} unmountOnExit onExited={onExited}>
         <Home setScreen={setNextScreen} />
       </CSSTransition>
-      <CSSTransition in={shouldRender('single note')} classNames="page" timeout={800} unmountOnExit onExited={onExited}>
+      <CSSTransition in={shouldRender('single note')} classNames="page" timeout={600} unmountOnExit onExited={onExited}>
         <SingleNote back={back} />
       </CSSTransition>
-      <CSSTransition in={shouldRender('single scale')} classNames="page" timeout={800} unmountOnExit onExited={onExited}>
+      <CSSTransition in={shouldRender('single scale')} classNames="page" timeout={600} unmountOnExit onExited={onExited}>
         <SingleScale back={back} />
       </CSSTransition>
-      <CSSTransition in={shouldRender('progression')} classNames="page" timeout={800} unmountOnExit onExited={onExited}>
+      <CSSTransition in={shouldRender('progression')} classNames="page" timeout={600} unmountOnExit onExited={onExited}>
         <Progression back={back} />
       </CSSTransition>
     </div>
