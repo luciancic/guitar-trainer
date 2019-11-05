@@ -14,10 +14,25 @@ $green: #138744;
     opacity: 1;
   }
 }
+@keyframes move-out-up {
+  from { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to { 
+    transform: translateY(-25vh);
+    opacity: 0;
+  }
+}
 
 @keyframes move-in-up {
   from { transform: translateY(75vh) }
   to { transform: translateY(0vh) }
+}
+
+@keyframes move-out-down {
+  from { transform: translateY(0vh) }
+  to { transform: translateY(75vh) }
 }
 
 .app {
@@ -49,20 +64,35 @@ h1 {
   & > *:nth-child(4) {
     animation: move-in-up 1200ms ease;
   }
-}
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 25vh;
-  animation: move-in-down 800ms ease;
-
-  & .back {
-    flex-basis: 135px;
+  &-exit {
+    & button:nth-child(2) {
+      animation: move-out-down 1200ms ease;
+    }
+    & button:nth-child(3) {
+      animation: move-out-down 1000ms ease;
+    }
+    & > *:nth-child(4) {
+      animation: move-out-down 900ms ease;
+    }
+  }
+  & .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 25vh;
+    animation: move-in-down 800ms ease;
+    
+    & .back {
+      flex-basis: 135px;
+    }
+  }
+  &-exit .header {
+    animation: move-out-up 800ms ease;
   }
 }
+
 
 button {
   font-family: Redressed;
