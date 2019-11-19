@@ -5,7 +5,7 @@ function SpeedSelect({ handleChange }) {
     <div className="speed-form">
       <label>Slow</label>
       <label>Fast</label>
-      <fieldset>
+      <div className="fieldset">
           <div>
               <input type="radio" name="speed" id="radio1" onChange={() => handleChange(5000)}/>
               <label htmlFor="radio1"></label>
@@ -26,7 +26,7 @@ function SpeedSelect({ handleChange }) {
               <input type="radio" name="speed" id="radio5" onChange={() => handleChange(1000)}/>
               <label htmlFor="radio5"></label>
           </div>
-      </fieldset>
+      </div>
   </div>
   )
 }
