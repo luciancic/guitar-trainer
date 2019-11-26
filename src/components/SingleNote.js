@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { notes } from '../consts'
-import { getRandomFrom, randUpTo } from '../helper'
+import { getRandomNote } from 'guitar-trainer-lib'
 import BackButton from './BackButton'
 import SpeedSelect from './SpeedSelection'
 
+function randUpTo(int) {
+    return int;
+}
+
 function SingleNote({ back }) {
-    const [ note, setNote ] = useState(getRandomFrom(notes))
+    const [ note, setNote ] = useState(getRandomNote())
     const [ fret, setFret ] = useState(randUpTo(20))
     const [ playing, setPlaying ] = useState(true)
     const [ intervalLength, setIntervalLength ] = useState(2000)
@@ -15,7 +18,7 @@ function SingleNote({ back }) {
     useEffect(() => {
         if (playing) {
             noteItv.current = setInterval(() => {
-                setNote(getRandomFrom(notes))
+                setNote(getRandomNote())
             }, intervalLength)
         }
         

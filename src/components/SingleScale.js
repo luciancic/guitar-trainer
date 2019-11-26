@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { keys } from '../consts'
-import { getRandomFrom } from '../helper'
+import { getRandomKey } from 'guitar-trainer-lib'
 import BackButton from './BackButton'
 
 function SingleScale({ back }) {
-    const [ key, setKey ] = useState(getRandomFrom(keys))
+    const [ key, setKey ] = useState(getRandomKey())
 
     return (
         <div className="page">
@@ -12,8 +11,8 @@ function SingleScale({ back }) {
                 <BackButton back={back} />
                 <h1>Single Scale</h1>
             </div>
-            <button className="button-red" onClick={() => setKey(getRandomFrom(keys))}>{key}</button>
-            <button className="button-small" onClick={() => setKey(getRandomFrom(keys))}>Next</button>
+            <button className="button-red" onClick={() => setKey(getRandomKey())}>{key}</button>
+            <button className="button-small" onClick={() => setKey(getRandomKey())}>Next</button>
         </div>
     )
 }
