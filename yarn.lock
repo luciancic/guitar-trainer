@@ -4388,10 +4388,10 @@ growly@^1.3.0:
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
-guitar-trainer-lib@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/guitar-trainer-lib/-/guitar-trainer-lib-0.0.0.tgz#fb8208e57f158065cfd061b96dccf1eef85354e6"
-  integrity sha512-ukzMLUfteulzfDtSQSblh/qdTVs0hmrgcPeZqSQM5ilHJ5ywJNu3UzqO661277Xcq6KvwNfcW4sgOGNY3H3cHA==
+guitar-trainer-lib@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/guitar-trainer-lib/-/guitar-trainer-lib-0.1.1.tgz#56bfce8d6dd76cb1fdc96aed3813e95aae55bc37"
+  integrity sha512-eq3moHIophAw+AxQm9bG65zpSnFrYCrcXDiz37LqGf7P3Qdqy1JBVGkNHRXqg8hvdjbJKQ/bwo5g1v8JaXg05g==
 
 gzip-size@5.1.1:
   version "5.1.1"
