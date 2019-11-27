@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
-import { keys, progressions } from '../consts'
-import { getRandomFrom } from '../helper'
+import { getRandomKey, getRandomProgression } from 'guitar-trainer-lib'
 import BackButton from './BackButton'
 
 function Progression({ back }) {
-    const [ key, setKey ] = useState(getRandomFrom(keys))
-    const [ progression, setProgression ] = useState(getRandomFrom(progressions))
+    const [ key, setKey ] = useState(getRandomKey())
+    const [ progression, setProgression ] = useState(getRandomProgression())
 
     function next() {
-        setKey(getRandomFrom(keys))
-        setProgression(getRandomFrom(progressions))
+        setKey(getRandomKey())
+        setProgression(getRandomProgression())
     }
 
     return (
