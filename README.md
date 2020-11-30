@@ -1,6 +1,6 @@
 # Guitar Trainer
 
-A collection of helper exercices for my guitar practice.
+My personal collection of guitar exercise helpers.
 
 ## Exercices
 
