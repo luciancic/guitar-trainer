@@ -2,6 +2,9 @@
   "name": "guitar-trainer",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=16.x"
+  },
   "dependencies": {
     "guitar-trainer-lib": "^0.1.1",
     "react": "^16.9.0",
