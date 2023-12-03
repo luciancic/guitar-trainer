@@ -8,7 +8,7 @@ function Home({ setScreen }) {
       <button onClick={() => setScreen('single scale')}>Single Scale</button>
       <button onClick={() => setScreen('progression')}>Progression</button>
     </div>
-  )
+  );
 }
 
 export default Home;

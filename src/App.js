@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
-import {CSSTransition} from 'react-transition-group'
-import Home from './components/Home'
-import SingleNote from './components/SingleNote'
-import SingleScale from './components/SingleScale'
-import Progression from './components/Progression'
-import './App.scss'
+import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import Home from './components/Home';
+import SingleNote from './components/SingleNote';
+import SingleScale from './components/SingleScale';
+import Progression from './components/Progression';
+import './App.scss';
 
 function App() {
-  const [ screen, setScreen ] = useState('home')
-  const [ nextScreen, setNextScreen ] = useState('home')
+  const [screen, setScreen] = useState('home');
+  const [nextScreen, setNextScreen] = useState('home');
 
-  const back = () => setNextScreen('home')
-  const shouldRender = (screenName) => screen === nextScreen && screen === screenName
-  const onExited = () => setScreen(nextScreen)
+  const back = () => setNextScreen('home');
+  const shouldRender = (screenName) => screen === nextScreen && screen === screenName;
+  const onExited = () => setScreen(nextScreen);
 
   return (
-    <div className='app'>
+    <div className="app">
       <CSSTransition in={shouldRender('home')} classNames="page" timeout={600} unmountOnExit onExited={onExited}>
         <Home setScreen={setNextScreen} />
       </CSSTransition>
