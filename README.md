@@ -1,14 +1,16 @@
 # Guitar Trainer
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/15f13110-4995-43cf-a3d3-d945ad7094f6/deploy-status)](https://app.netlify.com/sites/lucians-guitartrainer/deploys)
+
 My personal collection of guitar exercise helpers.
 
 ## Exercices
 
 3 exercices are currently available:
 
-* Single Note
-* Single Scale
-* Progression
+- Single Note
+- Single Scale
+- Progression
 
 ### Single note
 
